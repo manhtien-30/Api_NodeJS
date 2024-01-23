@@ -1,6 +1,7 @@
 import sql from 'mssql'
 import { Database } from 'sqlite3'
-    const sqlConfig = {
+export class DbConfig {
+    sqlConfig = {
         server: "",
         pool: {
             max: 10,
@@ -20,10 +21,12 @@ import { Database } from 'sqlite3'
         }
 
     }
-    var connnection = async () => {
+    connnection = async () => {
         try {
-            await sql.connect(sqlConfig);
+            await sql.connect(this.sqlConfig);
         } catch (error) {
             console.log(error)
         }
     }
+
+}

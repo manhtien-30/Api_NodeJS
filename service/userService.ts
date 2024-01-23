@@ -1,7 +1,7 @@
 import { Type } from 'typescript';
 import { User } from '../models/User'
 export class userService{
-
+    
     /**
      *
      */
